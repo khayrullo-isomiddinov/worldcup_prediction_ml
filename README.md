@@ -1,7 +1,6 @@
 # World Cup Match Outcome Prediction (Machine Learning Project)
 
-This project implements a complete end-to-end **Machine Learning pipeline** for predicting FIFA World Cup match outcomes.  
-Using historical match data, the model predicts whether a match will end in:
+This project implements a complete end-to-end **Machine Learning pipeline** for predicting FIFA World Cup match outcomes. Using historical match data, the model predicts whether a match will end in:
 
 - **Home Win**
 - **Away Win**
