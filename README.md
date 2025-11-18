@@ -57,7 +57,7 @@ The project was developed using a Jupyter Notebook (ml.ipynb) and includes full 
 
 This creates a fully reusable, production-ready ML pipeline.
 
-## 🚀 How to Run This Project
+## How to Run This Project
 
 ### **1. Clone Repository**
 
