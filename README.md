@@ -1,4 +1,4 @@
-# 🏆 World Cup Match Outcome Prediction (Machine Learning Project)
+# World Cup Match Outcome Prediction (Machine Learning Project)
 
 Welcome to my not-so-scientific-but-kinda-scientific attempt to predict FIFA World Cup match outcomes using Machine Learning.  I took a bunch of historical matches and shook them up in a Random Forest. Now the model predicts:
 
@@ -8,7 +8,7 @@ Welcome to my not-so-scientific-but-kinda-scientific attempt to predict FIFA Wor
 
 Basically, if football was predictable (it’s not), this model would be a genius.  
 
-Also, **I believe Spain will be champions next time**. Don’t argue. I said what I said. 🇪🇸🔥
+Also, **I believe Spain will be champions next time**. Don’t argue. I said what I said. 🇪🇸.
 
 ---
 
@@ -33,8 +33,9 @@ Mostly me looking at plots and pretending I understand football statistics.
   - Attendance
   - Match count  
 
-**Preview Plot (put your image here):**  
-![Goals Over The Years](images/goals_trend.png)
+**Preview Plot:**  
+![Goals Over The Years](https://static.independent.co.uk/2022/12/18/15/SEI137980520-1.jpg)
+
 
 ---
 
@@ -67,11 +68,8 @@ My notebook now has like 300+ columns. Probably not healthy.
 - Multi-class ROC curves  
 - Probability predictions (so the model can say “I think Spain wins, but like 63% sure”)  
 
-**Some cool visual (insert your own screenshot):**  
-![Confusion Matrix](images/confusion_matrix.png)
-
-**Feature Importance Example:**  
-![Feature Importance](images/feature_importance.png)
+**Some cool visual:**  
+![Confusion Matrix](https://images.mlssoccer.com/image/private/t_editorial_landscape_12_desktop/mls-lag-prd/jua6trkfwsccfydfm02f.jpg)
 
 ---
 
