@@ -1,86 +1,98 @@
-# World Cup Match Outcome Prediction (Machine Learning Project)
+# 🏆 World Cup Match Outcome Prediction (Machine Learning Project)
 
-This project implements a complete end-to-end **Machine Learning pipeline** for predicting FIFA World Cup match outcomes. Using historical match data, the model predicts whether a match will end in:
+Welcome to my not-so-scientific-but-kinda-scientific attempt to predict FIFA World Cup match outcomes using Machine Learning.  I took a bunch of historical matches and shook them up in a Random Forest. Now the model predicts:
 
-- **Home Win**
-- **Away Win**
+- **Home Win**  
+- **Away Win**  
 - **Draw**
 
-The project was developed using a Jupyter Notebook (ml.ipynb) and includes full EDA, feature engineering, model training, hyperparameter tuning, evaluation, and model saving.
+Basically, if football was predictable (it’s not), this model would be a genius.  
+
+Also, **I believe Spain will be champions next time**. Don’t argue. I said what I said. 🇪🇸🔥
 
 ---
 
-## What This Project Includes
+## What’s Inside This Project
 
 ### **1. Data Loading & Cleaning**
-- Loaded the historical World Cup dataset
-- Cleaned column names and removed irrelevant fields
-- Handled missing/invalid values
-- Constructed the target label: **HomeWin / AwayWin / Draw**
+- Loaded World Cup match data  
+- Removed random messy columns (referee names… why were they even there?)  
+- Cleaned everything until pandas stopped complaining  
+- Made the main label: **HomeWin / AwayWin / Draw**
 
-### **2. Exploratory Data Analysis (EDA)**
-- Summary statistics
-- Goals distribution
-- Match outcome distribution
-- Time-based trends:
-  - Total goals per year
-  - Average goals per match
-  - Attendance trends
-  - Matches per World Cup
+---
 
-  ### **3. Feature Engineering**
-- Goal difference  
+### **2. Exploratory Data Analysis (EDA)**  
+Mostly me looking at plots and pretending I understand football statistics.
+
+- Goals distribution  
+- Match outcomes  
+- Trends by year:
+  - Total goals
+  - Average goals
+  - Attendance
+  - Match count  
+
+**Preview Plot (put your image here):**  
+![Goals Over The Years](images/goals_trend.png)
+
+---
+
+### **3. Feature Engineering**
+- Goal difference (shocking: scoring more goals helps win matches)  
 - Total goals  
-- Knockout indicator  
+- “Is Knockout” flag  
 - One-hot encoding for:
-  - Home team
-  - Away team
-  - Match stage
-  - Team initials
+  - Home team  
+  - Away team  
+  - Stage  
+  - Team initials  
 
-  ### **4. Model Training**
-- Train/test split with stratification
-- Trained a **Random Forest Classifier**
-- Hyperparameter tuning using **GridSearchCV**
-- Final model chosen based on **F1-macro score**
+My notebook now has like 300+ columns. Probably not healthy.
+
+---
+
+### **4. Model Training**
+- Train/test split  
+- Trained a **Random Forest Classifier**  
+- Did **GridSearchCV**, because why not torture my CPU  
+- Picked best model based on F1 score
+
+---
 
 ### **5. Evaluation**
 - Classification report  
-- Confusion matrix heatmap  
-- Feature importance ranking  
-- Multi-class ROC curves (One-vs-Rest)  
-- Probability predictions for each outcome 
+- Confusion matrix  
+- Feature importance  
+- Multi-class ROC curves  
+- Probability predictions (so the model can say “I think Spain wins, but like 63% sure”)  
 
-### **6. Model Saving & Loading**
-- Saved final model using `joblib`
-- Verified correct loading and inference
+**Some cool visual (insert your own screenshot):**  
+![Confusion Matrix](images/confusion_matrix.png)
 
-This creates a fully reusable, production-ready ML pipeline.
+**Feature Importance Example:**  
+![Feature Importance](images/feature_importance.png)
 
-## How to Run This Project
+---
 
-### **1. Clone Repository**
+### **6. Saving & Loading the Model**
+- Saved using `joblib`  
+- Loaded it back  
+- It actually worked (rare W)
+
+---
+
+## How To Run This Project (quick version)
 
 ```bash
 git clone <your-repo-url>
 cd <your-repo-folder>
 
 python -m venv .venv
-
-.\.venv\Scripts\activate
+.\.venv\Scripts\activate  # Windows
 
 pip install -r requirements.txt
-
-jupyter notebook ml.ipynb
-
-import joblib
-model = joblib.load("worldcup_match_predictor.pkl")
-
-model.predict(new_X)          
-model.predict_proba(new_X)   
 ```
 
-## Author
-Khayrullo “Harry” Isomiddinov
-Computer Science @ ELTE
-Machine Learning & Full-Stack Developer
+
+jupyter notebook ml.ipynb
